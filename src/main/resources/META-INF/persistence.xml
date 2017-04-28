@@ -2,12 +2,13 @@
 <persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
   <persistence-unit name="personogm" transaction-type="JTA">
     <provider>org.hibernate.ogm.jpa.HibernateOgmPersistence</provider>        
-      <properties>
-        <property name="hibernate.ogm.datastore.provider" value="mongodb"/>
+      <properties>        
         <property name="hibernate.ogm.mongodb.database" value="minortest"/>
         <property name="hibernate.ogm.mongodb.host" value="localhost"/>
-        <property name="hibernate.ogm.mongodb.port" value="27017"/>
-        <property name="hibernate.ogm.datastore.database" value="minortest"/>
+        <property name="hibernate.ogm.mongodb.port" value="27017"/>       
+        <property name="hibernate.ogm.datastore.create_database" value="true" />
+        <property name="hibernate.ogm.datastore.provider" value="org.hibernate.ogm.datastore.mongodb.impl.MongoDBDatastoreProvider"/>
+        <property name="hibernate.ogm.datastore.database" value="minortest2" />
         <property name="hibernate.ogm.mongodb.username" value="pranav"/>
         <property name="hibernate.ogm.mongodb.password" value="pranav"/>
       </properties>
